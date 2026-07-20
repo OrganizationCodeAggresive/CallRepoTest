@@ -22,7 +22,7 @@ jobs:
     uses: OrganizationCodeAggresive/ETK-Workflows/.github/workflows/sync-copilot-instructions.yml@main
     with:
       source_repo: ${{ github.repository }}
-      source_path: integrations/github-copilot/instructions/copilot-instructions.md
+      source_path: integrations/github-copilot/copilot-instructions.md
       target_repo: OrganizationCodeAggresive/AutoReviewTest
       target_path: .github/copilot-instructions.md
       source_branch: main
