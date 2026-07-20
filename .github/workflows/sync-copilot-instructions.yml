@@ -2,11 +2,11 @@ name: Sync copilot-instructions.md to AutoReviewTest
 
 # Local trigger workflow (calling repo).
 # Contains NO secrets and NO logic — it only orchestrates a call to the
-# centralized reusable workflow in United-Airlines-Org/ETK-Workflows.
+# centralized reusable workflow in OrganizationCodeAggresive/ETK-Workflows.
 #
 # When the copilot-instructions.md source file changes on `main`, this workflow
 # calls the reusable sync workflow, which copies the file into
-# United-Airlines-Org/AutoReviewTest at .github/copilot-instructions.md
+# OrganizationCodeAggresive/AutoReviewTest at .github/copilot-instructions.md
 # (opening a pull request there).
 
 on:
@@ -19,11 +19,11 @@ on:
 
 jobs:
   sync:
-    uses: United-Airlines-Org/ETK-Workflows/.github/workflows/sync-copilot-instructions.yml@main
+    uses: OrganizationCodeAggresive/ETK-Workflows/.github/workflows/sync-copilot-instructions.yml@main
     with:
       source_repo: ${{ github.repository }}
       source_path: integrations/github-copilot/instructions/copilot-instructions.md
-      target_repo: United-Airlines-Org/AutoReviewTest
+      target_repo: OrganizationCodeAggresive/AutoReviewTest
       target_path: .github/copilot-instructions.md
       source_branch: main
       target_branch: main
