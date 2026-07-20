@@ -14,7 +14,7 @@ on:
     branches:
       - main
     paths:
-      - 'integrations/github-copilot/instructions/copilot-instructions.md'
+      - 'integrations/github-copilot/copilot-instructions.md'
   workflow_dispatch:
 
 jobs:
